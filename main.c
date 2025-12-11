@@ -5,8 +5,8 @@ gboolean update_time(gpointer label) {
     const time_t t = time(NULL);
     struct tm tm = *localtime(&t);
     char fmt[] = "<span size=\"40pt\" weight=\"bold\" face=\"JetBrains Mono\">%H:%M:%S</span>";
-    char time_str[sizeof(fmt)];
-    strftime(time_str, sizeof(fmt), fmt, &tm);
+    char time_str[strlen(fmt)+1];
+    strftime(time_str, strlen(fmt)+1, fmt, &tm);
     gtk_label_set_markup(GTK_LABEL(label), time_str);
     return G_SOURCE_CONTINUE;
 }
