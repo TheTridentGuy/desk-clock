@@ -43,7 +43,7 @@ void activate(GtkApplication *app) {
     gtk_window_set_child(GTK_WINDOW(window), container);
 
     GtkWidget *time_label = gtk_label_new("");
-    GtkWidget *battery_label = gtk_label_new("gay sex");
+    GtkWidget *battery_label = gtk_label_new("");
 
     gtk_widget_set_halign(time_label, GTK_ALIGN_CENTER);
     gtk_widget_set_valign(time_label, GTK_ALIGN_CENTER);
