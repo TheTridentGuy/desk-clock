@@ -3,7 +3,6 @@ project(desk_clock C)
 
 set(CMAKE_C_STANDARD 11)
 
-
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK4 REQUIRED IMPORTED_TARGET gtk4)
 

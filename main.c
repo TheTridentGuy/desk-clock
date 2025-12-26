@@ -22,7 +22,8 @@ gboolean periodic(gpointer user_data) {
         char capacity[4];
         fgets(capacity, 4, capacity_file);
         capacity[strcspn(capacity, "\n")] = 0;
-        char *battery_string = g_strdup_printf("<span size=\"15pt\" face=\"JetBrains Mono\">Battery: %s%</span>", capacity);
+        char *battery_string = g_strdup_printf("<span size=\"15pt\" face=\"JetBrains Mono\">Battery: %s%</span>",
+                                               capacity);
         gtk_label_set_markup(GTK_LABEL(labels->battery_label), battery_string);
     }
     fclose(capacity_file);
